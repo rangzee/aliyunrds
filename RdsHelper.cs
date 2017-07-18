@@ -139,6 +139,21 @@ namespace AliyunRDS
         }
 
         /// <summary>
+        /// 修改账号密码
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="password"></param>
+        public void ResetAccountPassword(string name, string password)
+        {
+            ResetAccountPasswordRequest request = new ResetAccountPasswordRequest();
+            request.DBInstanceId = dbInstanceId;
+            request.AccountName = name;
+            request.AccountPassword = password;
+
+            client.GetAcsResponse(request);
+        }
+
+        /// <summary>
         /// 删除账号
         /// </summary>
         /// <param name="name"></param>

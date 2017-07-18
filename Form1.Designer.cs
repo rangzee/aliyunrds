@@ -47,6 +47,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tbDBInstanceID = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnPassword = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnDatabaseList
@@ -220,11 +221,22 @@
             this.label8.TabIndex = 17;
             this.label8.Text = "DBInstanceID:";
             // 
+            // btnPassword
+            // 
+            this.btnPassword.Location = new System.Drawing.Point(550, 553);
+            this.btnPassword.Name = "btnPassword";
+            this.btnPassword.Size = new System.Drawing.Size(75, 23);
+            this.btnPassword.TabIndex = 18;
+            this.btnPassword.Text = "修改密码";
+            this.btnPassword.UseVisualStyleBackColor = true;
+            this.btnPassword.Click += new System.EventHandler(this.btnPassword_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(671, 580);
+            this.ClientSize = new System.Drawing.Size(671, 617);
+            this.Controls.Add(this.btnPassword);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -272,6 +284,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox tbDBInstanceID;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnPassword;
     }
 }
 

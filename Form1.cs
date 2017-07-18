@@ -104,5 +104,25 @@ namespace AliyunRDS
             {
                 MessageBox.Show(ex.Message, "程序错误");
             }
-        }    }
+        }
+
+        private void btnPassword_Click(object sender, EventArgs e)
+        {
+            RdsHelper rds = new RdsHelper(
+                tbRegionID.Text.Trim(),
+                tbAccessKeyID.Text.Trim(),
+                tbAccessKeySecret.Text.Trim(),
+                tbDBInstanceID.Text.Trim());
+
+            try
+            {
+                rds.ResetAccountPassword(tbAccount.Text.Trim(), tbPassword.Text.Trim());
+                textBox1.AppendText("账号密码修改成功" + Environment.NewLine);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "程序错误");
+            }
+        }
+    }
 }
